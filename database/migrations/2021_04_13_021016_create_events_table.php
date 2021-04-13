@@ -19,8 +19,8 @@ class CreateEventsTable extends Migration
             $table->dateTime('valid_to');
             $table->string('title',250);
             $table->text('content');    
-            $table->string('gps_lat',50);        
-            $table->string('gps_lng',50);      
+            $table->string('gps_lat',50)->nullable();        
+            $table->string('gps_lng',50)->nullable();      
             $table->unsignedInteger('user_id');  
             $table->timestamps();
             $table->foreign('user_id')
